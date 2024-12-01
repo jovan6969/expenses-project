@@ -1,0 +1,10 @@
+<ul id="users">
+ 
+    @for (user of users; track user.id) {
+      <li>
+        <app-user [user]="user" />
+      </li>
+    }
+    <button class="btn btn-danger my-5" (click)="onDeleteUsers()">Delete users</button>
+  </ul>
+  

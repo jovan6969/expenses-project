@@ -1,0 +1,31 @@
+
+    <div class="container">
+      <div class="row">
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <div>
+                <label for="name" class="fw-semibold my-3">What did you buy?</label>
+                <input type="text" name="name" id="name" class="form-control" required [(ngModel)]="name">
+            </div>
+            <div>
+                <label for="role" class="fw-semibold my-3">What is the purpose of your purchase</label>
+                <select name="role" id="role" class="form-control" [(ngModel)]="role" required>
+                    <option value="Personal">Personal</option>
+                    <option value="General">General</option>
+                </select>
+            </div>
+            <div>
+                <label for="price" class="fw-semibold my-3">How much did it cost?</label>
+                <input type="text" name="price" id="price" class="form-control" required [(ngModel)]="price">
+            </div>
+                <div class="row mt-5 text-center">
+                    
+                    <div class="col-6">
+                        <button class="btn btn-success" type="submit">Send</button>
+                    </div> 
+                    <div class="col-6">
+                        <button class="btn btn-danger" (click)="onClose()" >Close</button>
+                    </div>
+                </div>
+        </form>
+      </div>
+    </div>

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <h2 class="text-center fw-semibold my-5">Add a new user!</h2>
+        <br><br>
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <div class="row">
+            <div class="col-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" required>
+            </div>
+            <div class="col-6">
+                <label for="role">Role</label>
+                <select name="role" id="role" class="form-control" [(ngModel)]="role" required>
+                    <option value="Adult">adult</option>
+                    <option value="Child">child</option>
+                </select>
+            </div>
+            @if(adult){
+                <div class="col-8">
+                    <label for="">income</label>
+                    <input type="number" class="form-control" id="income" name="income" [(ngModel)]="income">
+                </div>
+              
+            }
+            <div class="col-10">
+                <label for="text">Image</label>
+                <input type="text" class="form-control" [(ngModel)]="img" id="img" name="img">
+            </div>
+                <div class="text-center">
+                    <button class="btn btn-primary mt-5 w-100" [disabled]="!form.valid">submit</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>

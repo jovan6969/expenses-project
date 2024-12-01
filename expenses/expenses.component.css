@@ -1,0 +1,35 @@
+.scrollable-div {
+    height: 250px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden;
+    border: 1px solid #ccc; /* Optional: Add border for visual clarity */
+    padding: 10px;
+    
+}
+.row {
+
+    background-color: #f0f0f0;
+     padding: 10px; 
+        
+}
+.dla{
+    display: inline-block;
+}
+.price{
+    margin-left: 1040px;
+    margin-top:15px;
+}
+.item{
+    border-bottom: gray 1px solid;
+}
+dialog {
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+  }
+  
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }

@@ -1,0 +1,12 @@
+
+  <div class="container">
+    <div class="row">
+    
+       <a [routerLink]="['/users', user().id, 'expenses']" routerLinkActive="selected" >
+        <img [src]="user().img" [alt]="user().name" /> 
+        <h5 class="fw-semibold mx-5">{{user().name}}</h5>
+      </a>
+      </div>
+    </div>
+ 
+  

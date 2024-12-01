@@ -1,0 +1,29 @@
+<div class="container mt-5 p-5">
+    <div class="row p-5">
+        <div class="col-12">
+            <h3 class="fw-semibold text-center my-3">{{name()}}`s expenses</h3>
+        </div>
+       
+        @for (expenses of expense(); track expenses.id) {
+            @if (expenses.id === id()) {
+                <app-user-expenses [id]="id()" [expense]="expenses" [price]="expenses.price"   ></app-user-expenses>
+            }
+
+           
+            }
+    </div>
+
+    @if (adult() === 'Adult') {
+        <p class="mx-5 my-3 lead">{{name()}}`s income : {{adultInc() + '$'}} </p>
+    }
+  
+    <p class="lead mx-5 my-3"> Total money spent : </p>
+  
+    @if (adult() === 'Adult') {
+        <p class="mx-5 my-3 lead">Total money saved : </p>
+    }
+   
+    <button class="btn btn-success btn-lg text-center my-4" (click)="openDialog()" routerLink="newExpense"> Add Expense </button>
+    <dialog #dialog>
+    <router-outlet></router-outlet>
+  </dialog>
